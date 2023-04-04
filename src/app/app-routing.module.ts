@@ -34,11 +34,13 @@ import { PagesRegisterComponent } from './pages/pages-register/pages-register.co
 import { UsersProfileComponent } from './pages/users-profile/users-profile.component';
 
 import { GymComponent } from './components/calendar/gym/gym.component';
+import { ReservationComponent } from './components/forms/reservation/reservation.component';
 
 const routes: Routes = [
   { path: '', component: DashboardComponent },
 
   { path: 'gym', component: GymComponent},
+  { path: 'reservation', component: ReservationComponent},
 
   { path: 'dashboard', component: DashboardComponent },
   { path: 'alerts', component: AlertsComponent },
