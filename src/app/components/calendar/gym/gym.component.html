@@ -1,0 +1,50 @@
+<main id="main" class="main">
+    <div class="pagetitle">
+       <h1>Calendar Gym</h1>
+       <nav>
+         <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a routerLink="/">Home</a></li>
+            <li class="breadcrumb-item">Calendar</li>
+            <li class="breadcrumb-item active">Gym</li>
+         </ol>
+      </nav>
+    </div>
+    <div>
+       <full-calendar  #calendar [options] = "calendarOptions"  [events]="events" ></full-calendar>
+    </div>
+ 
+ <!-- Button trigger modal -->
+ <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal" #openbutton hidden>
+    Launch demo modal
+  </button>
+ 
+  <!-- Modal -->
+  <div class="modal fade"  id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h1 class="modal-title fs-5" id="exampleModalLabel">Event</h1>
+          <button type="button" #closebutton class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <div class="col-lg-8">
+             <label for="exampleFormControlInput1">Event Tittle:</label>
+             <input type="text" class="form-control" id="" placeholder="" [(ngModel)]="object.title"
+           >
+           </div>
+           <div *ngIf="visible" class="col-lg-3">
+             <label for="exampleFormControlInput1">Date:</label>
+             <input type="text" disabled="" class="form-control" id="" placeholder="" [(ngModel)]="object.date"
+           >
+           </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+          <button type="button" *ngIf = "visible" class="btn btn-primary" (click)="AddEvent()">Add</button>
+          <button type="button" *ngIf = "not_visible" class="btn btn-success" (click)="EditEvent(object)">Edit</button>
+        </div>
+      </div>
+    </div>
+  </div>
+ 
+ </main>
