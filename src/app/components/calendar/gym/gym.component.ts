@@ -4,6 +4,7 @@ import dayGridPlugin from '@fullcalendar/daygrid';
 import interactionPlugin from '@fullcalendar/interaction'; 
 import { FullCalendarComponent } from '@fullcalendar/angular';
 
+
 @Component({
   selector: 'app-gym',
   templateUrl: './gym.component.html',
@@ -11,6 +12,8 @@ import { FullCalendarComponent } from '@fullcalendar/angular';
 })
 export class GymComponent implements OnInit {
 
+
+  
   @ViewChild('calendar') calendarComponent: FullCalendarComponent | any;
 
   @ViewChild('closebutton')
@@ -20,7 +23,7 @@ export class GymComponent implements OnInit {
   openbutton!: { nativeElement: { click: () => void; }; };
  
 
- 
+
   AddEvent(){
     const newEvent: EventInput = this.object;
     this.eventszxc.push(newEvent);
@@ -89,5 +92,7 @@ export class GymComponent implements OnInit {
     this.visible = false;
     this.not_visible = true;
   }
-
 }
+
+
+

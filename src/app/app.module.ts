@@ -42,11 +42,6 @@ import { GymComponent } from './components/calendar/gym/gym.component';
 
 import { FullCalendarModule } from '@fullcalendar/angular';
 import { FormsModule } from '@angular/forms';
-import { ReservationComponent } from './components/forms/reservation/reservation.component';
-
-
-import { MatButtonModule } from '@angular/material/button';
-import { MatIconModule } from '@angular/material/icon';
 
 @NgModule({
   declarations: [
@@ -86,28 +81,17 @@ import { MatIconModule } from '@angular/material/icon';
     PagesLoginComponent,
     PagesError404Component,
     PagesBlankComponent,
-    GymComponent,
-    ReservationComponent
-  ], 
+    GymComponent
+  ],
   imports: [
     BrowserModule,
     AppRoutingModule,
 
     FullCalendarModule,
-    FormsModule,
-
-    MatButtonModule,
-    MatIconModule
-
+    FormsModule
+ 
   ],
   providers: [],
-  bootstrap: [AppComponent],
-
-  exports: [
-    MatButtonModule,
-    MatIconModule
-  ]
-  
-  
+  bootstrap: [AppComponent]
 })
 export class AppModule { }
