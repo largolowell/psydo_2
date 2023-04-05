@@ -32,12 +32,14 @@ import { PagesFaqComponent } from './pages/pages-faq/pages-faq.component';
 import { PagesLoginComponent } from './pages/pages-login/pages-login.component';
 import { PagesRegisterComponent } from './pages/pages-register/pages-register.component';
 import { UsersProfileComponent } from './pages/users-profile/users-profile.component';
-
+import { ReservationComponent } from './components/form/reservation/reservation.component';
 import { GymComponent } from './components/calendar/gym/gym.component';
+
  
 const routes: Routes = [
   { path: '', component: DashboardComponent },
 
+  { path: 'reservation', component: ReservationComponent},
   { path: 'gym', component: GymComponent},
 
   { path: 'dashboard', component: DashboardComponent },

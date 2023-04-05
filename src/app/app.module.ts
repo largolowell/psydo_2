@@ -38,11 +38,25 @@ import { PagesRegisterComponent } from './pages/pages-register/pages-register.co
 import { PagesLoginComponent } from './pages/pages-login/pages-login.component';
 import { PagesError404Component } from './pages/pages-error404/pages-error404.component';
 import { PagesBlankComponent } from './pages/pages-blank/pages-blank.component';
-import { GymComponent } from './components/calendar/gym/gym.component';
+import { ReservationComponent } from './components/form/reservation/reservation.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+
+
+
 
 import { FullCalendarModule } from '@fullcalendar/angular';
 import { FormsModule } from '@angular/forms';
+import { MatDatepickerModule } from '@angular/material/datepicker';
+import { MatInputModule } from '@angular/material/input';
+import { MatNativeDateModule } from '@angular/material/core';
+import { GymComponent } from './components/calendar/gym/gym.component';
 
+
+
+
+
+
+ 
 @NgModule({
   declarations: [
     AppComponent,
@@ -81,15 +95,20 @@ import { FormsModule } from '@angular/forms';
     PagesLoginComponent,
     PagesError404Component,
     PagesBlankComponent,
+    ReservationComponent,
     GymComponent
+
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
+    BrowserAnimationsModule,
+    FormsModule,
+    MatDatepickerModule,
+    MatInputModule,
+    MatNativeDateModule,
+    FullCalendarModule
 
-    FullCalendarModule,
-    FormsModule
- 
   ],
   providers: [],
   bootstrap: [AppComponent]
