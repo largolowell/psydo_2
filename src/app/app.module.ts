@@ -45,13 +45,14 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 
 import { FullCalendarModule } from '@fullcalendar/angular';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { MatDatepickerModule } from '@angular/material/datepicker';
 import { MatInputModule } from '@angular/material/input';
 import { MatNativeDateModule } from '@angular/material/core';
 import { GymComponent } from './components/calendar/gym/gym.component';
 
-
+import { SharedService } from './shared.service';
+import { HttpClientModule } from '@angular/common/http';
 
 
 
@@ -107,10 +108,13 @@ import { GymComponent } from './components/calendar/gym/gym.component';
     MatDatepickerModule,
     MatInputModule,
     MatNativeDateModule,
-    FullCalendarModule
+    FullCalendarModule,
+    HttpClientModule,
+    ReactiveFormsModule,
+   
 
   ],
-  providers: [],
+  providers: [SharedService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
